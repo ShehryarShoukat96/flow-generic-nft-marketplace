@@ -5,7 +5,11 @@
 			"serviceAccount": "emulator-account"
 		}
 	},
-	"contracts": {},
+	"contracts": {
+		"FungibleToken": "./cadence/contracts/FungibleToken.cdc",
+		"NonFungibleToken": "./cadence/contracts/NonFungibleToken.cdc",
+		"NFTStorefront": "./cadence/contracts/NFTStorefront.cdc"
+	},
 	"networks": {
 		"emulator": "127.0.0.1:3569",
 		"mainnet": "access.mainnet.nodes.onflow.org:9000",
@@ -17,5 +21,9 @@
 			"key": "a8ea15da48fc9367970c188567fd549607a6d066b7f14378b2f517ae987f7920"
 		}
 	},
-	"deployments": {}
+	"deployments": {
+		"emulator": {
+			"emulator-account": [ "FungibleToken", "NonFungibleToken", "NFTStorefront" ]
+		}
+	}
 }
