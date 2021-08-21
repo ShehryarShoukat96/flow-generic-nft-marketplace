@@ -1,4 +1,4 @@
-import FungibleToken from 0x01
+import FungibleToken from "./FungibleToken.cdc"
 
 pub contract SherryToken: FungibleToken {
 
